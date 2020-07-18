@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .header-top-left {
+        float: left;
+        opacity: .75;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .header-left {
+        color: black;
+        font-family: helvetica;
+        font-size: 13px;
+        cursor: pointer;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        margin-left: 15px;
+        margin-right: 3px;
+    }
+    .header-left:hover {
+        text-decoration-line: underline;
+    }
+    .header-top-right {
+        float: right;
+        opacity: .75;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .header-right {
+        color: black;
+        font-family: helvetica;
+        font-size: 13px;
+        cursor: pointer;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        margin-left: 10px;
+        margin-right: 3px;
+    }
+    .header-right:hover {
+        text-decoration-line: underline;
+    }
+    #apps-icon {
+        display: inline-flex;
+        background-image: url(http://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+        background-position: -132px -38px;
+        background-size: 528px 68px;
+        width: 30px;
+        height: 30px;
+        opacity: 0.65;
+        margin-left: 12px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    #apps-icon:hover {
+        opacity: 1;
+    }
+    #sign-in {
+        display: inline-block;
+        font-family: helvetica;
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        text-decoration-line: none;
+        text-align: center;
+        line-height: 30px;
+        vertical-align: middle;
+        background-color: rgba(14, 67, 241, 0.822);
+        width: 70px;
+        height: 30px;
+        border-radius: 2px;
+        margin-right: 30px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .img-container {
+        text-align: center;
+        display: block;
+        padding-top: 180px;
+    }
+    .search-bar {
+        width: 600px;
+        position: relative;
+        height: 40px;
+        border: 1px solid #bebaba;
+        border-radius: 30px;
+        margin: 30px auto;
+        box-sizing: inherit;
+    }
+    .search-bar:hover {
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.30);
+    }
+    .search-text {
+        width: inherit;
+        display: inline-block;
+        height: inherit;
+        font-size: 16px;
+        border: none;
+        background-color: transparent;
+        box-sizing: inherit;
+        text-align: left;
+        padding-left: 40px;
+        font-family: sans-serif;
+        outline: none;
+    }
+    .mag-glass {
+        background-image: url(http://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+        display: inline-block;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        right: 565px;
+        top: 12px;
+        opacity: 0.3;
+        background-position: -250px -36px;
+    }
+    .mic {
+        background-image: url(https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png);
+        display: inline-block;
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        right: 20px;
+        top: 10px;
+        background-size: 24px 24px;
+        cursor: pointer;
+    }
+    .search-buttons {
+        display: flex;
+        width: 600px;
+        height: 40px;
+        margin: 30px auto;
+        justify-content: center;
+    }
+    .google-search {
+        font-family: helvetica;
+        font-size: 14px;
+        opacity: .7;
+        text-decoration-line: none;
+        border-radius: 5px;
+        border-color: transparent;
+        cursor: pointer;
+        margin-right: 10px;
+        padding: 0 15px 0 15px;
+    }
+    .google-search:hover {
+        border-color:rgba(32, 33, 36, 0.30)
+    }
+    .im-feeling-lucky {
+        font-family: helvetica;
+        font-size: 14px;
+        opacity: .7;
+        margin-right: 15px;
+        text-decoration-line: none;
+        border-radius: 5px;
+        border-color: transparent;
+        cursor: pointer;
+        padding: 0 15px 0 15px;
+    }
+    .im-feeling-lucky:hover {
+        border-color:rgba(32, 33, 36, 0.30)
+    }
+    .explore {
+        display: block;
+        font-family: helvetica;
+        font-size: 12px;
+        color: rgba(32, 33, 36, 1.0);
+        text-align: center;
+    }
+    .google-store {
+        text-decoration-line: none;
+    }
+    .google-store:hover {
+        text-decoration-line: underline;
+    }
+    .footer-bottom-left {
+        float: left;
+        opacity: .75;
+        align-items: center;
+        bottom: 10px;
+        left: 10px;
+        position: fixed;
+    }
+    .footer-left {
+        color: black;
+        font-family: helvetica;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        margin-left: 18px;
+        margin-right: 3px;
+    }
+    .footer-left:hover {
+        text-decoration-line: underline;
+    }
+    .footer-bottom-right {
+        opacity: .75;
+        align-items: center;
+        bottom: 10px;
+        float: right;
+        right: 30px;
+        position: fixed;
+    }
+    .footer-right {
+        color: black;
+        font-family: helvetica;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration-line: none;
+        text-decoration-color: black;
+        margin-left: 18px;
+        margin-right: 3px;
+    }
+    .footer-right:hover {
+        text-decoration-line: underline;
+    }
+    .footer {
+        background-color: rgba(128, 128, 128, 0.185);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;  
+    }
+</style>
+<body>
+    <header>
+        <nav class="header-top-left">
+            <a class="header-left">About</a>
+            <a class="header-left">Store</a>
+        </nav>
+        <nav class="header-top-right">
+            <a class="header-right">Gmail</a>
+            <a class="header-right">Images</a>
+            <a id="apps-icon"></a>
+            <a id="sign-in"><strong>Sign In</strong></a>
+        </nav>
+        </header>
+    <div class="img-container">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo"></div>
+    <div class="search-bar">
+        <input type="text" class="search-text">
+        <div class="mag-glass"></div>
+        <div class="mic"></div>
+    </div>
+    <div class="search-buttons">
+        <input value="Google Search" type="submit" class="google-search">
+        <input value="I'm Feeling Lucky" type="submit" class="im-feeling-lucky">
+    </div>
+    <div>
+        <p class="explore">Explore helpful devices for your home at the <a class="google-store" href="#">Google Store</a></p>
+    </div>
+    
+    <footer class="footer">
+        <nav class="footer-bottom-left">
+            <a class="footer-left">Advertising</a>
+            <a class="footer-left">Business</a>
+            <a class="footer-left">How Search works</a>
+        </nav>
+        <nav class="footer-bottom-right">
+            <a class="footer-right">Privacy</a>
+            <a class="footer-right">Terms</a>
+            <a class="footer-right">Settings</a>
+        </nav>
+    </footer>
+</body>
+</html>
